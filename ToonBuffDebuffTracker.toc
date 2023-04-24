@@ -1,4 +1,4 @@
-## Title: ToonBuffDebuff
+## Title: ToonBuffDebuffTracker
 ## Author: Jeskoh
 ## Version: 1.0.0
 ## SavedVariablesPerCharacter: FrameDB
