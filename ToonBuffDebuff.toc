@@ -1,0 +1,8 @@
+## Title: ToonBuffDebuff
+## Author: Jeskoh
+## Version: 1.0.0
+## SavedVariablesPerCharacter: FrameDB
+## Notes: Tracks the rotation and buffs of a toon and displays it in a frame.
+
+globals.lua
+ToonBuffDebuff.lua
