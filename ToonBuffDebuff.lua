@@ -83,7 +83,7 @@ local function UpdateDebuffDisplay()
         end
 
         local expirationTime = debuffData.expirationTime - GetTime()
-        if expirationTime <= 0 then
+        if buffExpirationTime <= 0 or buffExpirationTime >= 90 then
             ResetInactiveBuffIcon(debuffIcon)
             existingDebuffIDs[debuffData.spellId] = nil
         else
@@ -143,7 +143,7 @@ end)
 buffFrame:RegisterEvent("ADDON_LOADED")
 buffFrame:RegisterEvent("PLAYER_LOGOUT")
 buffFrame:SetScript("OnEvent", function(self, event, arg1)
-    if event == "ADDON_LOADED" and arg1 == "JescoTest" then
+    if event == "ADDON_LOADED" and arg1 == "ToonBuffDebuff" then
         InitializePosition(buffFrame)
     elseif event == "PLAYER_LOGOUT" then
         SavePosition(buffFrame)

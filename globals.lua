@@ -75,8 +75,8 @@ end
 function buffsDebuffs()
     local buffsData, debuffsData = {}, {}
     for i = 1, 40 do -- assuming you want to check all 40 buff/debuff slots
-        local debuffName, _, debuffIcon, _, debuffDuration, debuffExpirationTime, debuffCaster, _, _, debuffSpellId = UnitDebuff("target", i, "HARMFUL|PLAYER")
-        local buffName, _, buffIcon, _, buffDuration, buffExpirationTime, buffCaster, _, _, buffSpellId = UnitBuff("player", i, "HELPFUL|PLAYER")
+        local debuffName, _, debuffIcon, _, debuffDuration, debuffExpirationTime, debuffCaster, _, _, debuffSpellId = UnitAura("target", i, "HARMFUL|PLAYER")
+        local buffName, _, buffIcon, _, buffDuration, buffExpirationTime, buffCaster, _, _, buffSpellId = UnitAura("player", i, "HELPFUL|PLAYER")
         local petBuffName, _, petBuffIcon, _, petBuffDuration, petBuffExpirationTime, petBuffCaster, _, _, petBuffSpellId, _, _,_,_,_,_, buffAmount  = UnitAura("pet", i, "HELPFUL|PLAYER")
         if debuffName and debuffCaster == "player" then -- if there is a debuff present and it's applied by the player
             local debuff = {
