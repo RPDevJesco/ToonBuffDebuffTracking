@@ -1,4 +1,4 @@
-# ToonBuffDebuffTracking
+# ToonBuffDebuffTracker
 An addon for WOTLK Classic to track buffs and debuffs.
 Works for Retail and WOTLK. Vanilla classic only partially works.
 This is probably due to Vanilla using different API calls than what i'm using.
